@@ -3,8 +3,12 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Post from "./components/Post";
 import Test from "./components/Test";
+import axios from 'axios';
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 function App() {
   return (
     <Router>
